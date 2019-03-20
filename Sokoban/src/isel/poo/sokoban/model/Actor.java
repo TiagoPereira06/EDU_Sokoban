@@ -1,5 +1,4 @@
 package isel.poo.sokoban.model;
 
-public class Cell {
-
+public class Actor {
 }

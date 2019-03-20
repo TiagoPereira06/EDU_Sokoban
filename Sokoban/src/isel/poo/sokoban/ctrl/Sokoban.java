@@ -95,7 +95,7 @@ public class Sokoban {
         @Override
         public void cellUpdated(int l, int c, Cell cell) { view.getTile(l,c).repaint(); }
         @Override
-        public void cellRepalced(int l, int c, Cell cell) { view.setTile(l,c, CellTile.tileOf(cell)); }
+        public void cellReplaced(int l, int c, Cell cell) { view.setTile(l,c, CellTile.tileOf(cell)); }
     }
     private Updater updater = new Updater();
 
@@ -105,12 +105,12 @@ public class Sokoban {
     private void play() {
         int key = getKeyPressed();          // Wait a step time and read a key
         if (key > 0) {
-            Dir dir = null;
+            DIR dir = null;
             switch (key) {
-                case VK_UP: dir = Dir.UP; break;
-                case VK_DOWN: dir = Dir.DOWN; break;
-                case VK_LEFT: dir = Dir.LEFT; break;
-                case VK_RIGHT: dir = Dir.RIGHT; break;
+                case VK_UP: dir = DIR.UP; break;
+                case VK_DOWN: dir = DIR.DOWN; break;
+                case VK_LEFT: dir = DIR.LEFT; break;
+                case VK_RIGHT: dir = DIR.RIGHT; break;
                 case VK_S: model.restart(); refreshView(); break;
                 case VK_ESCAPE: escaped=true; return;
             }

@@ -1,5 +1,5 @@
 package isel.poo.sokoban.model;
 
-public enum Dir {
+public enum DIR {
     DOWN, LEFT, RIGHT, UP
 }
